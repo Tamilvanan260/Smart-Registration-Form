@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="reg_1">
+        <div>
+            <h1 class="head">Create Account</h1>
+            <p class="text">Fill in all the details below</p>
+        </div>
+
+        <div id="successMsg" style="display:none;">
+            Registration Successful! Welcome!
+        </div>
+        <div class="container">
+
+            <!-- Full Name -->
+            <div class="field">
+                <p>Full Name<span>*</span></p>
+                <input type="text" placeholder="Enter your name" id="name">
+                <span class="error" id="nameError"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="field">
+                <p>Email<span>*</span></p>
+                <input type="email" placeholder="you@example.com" id="email">
+                <span class="error" id="emailError"></span>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="field">
+                <p>Phone Number<span>*</span></p>
+                <input type="tel" placeholder="e.g. 9865573566" id="phone">
+                <span class="error" id="phoneError"></span>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="field">
+                <p>Date of Birth <span>*</span></p>
+                <input type="date" id="dob">
+                <span class="error" id="dobError"></span>
+            </div>
+
+            <!-- Gender -->
+            <div class="field">
+                <p>Gender <span>*</span></p>
+                <select id="gender">
+                    <option value="">-- Select Gender --</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <span class="error" id="genderError"></span>
+            </div>
+
+            <!-- Password -->
+            <div class="field">
+                <p>Password <span>*</span></p>
+                <input type="password" placeholder="Minimum 6 characters" id="password">
+                <span class="error" id="passwordError"></span>
+            </div>
+
+            <!-- Confirm Password  -->
+            <div class="field">
+                <p>Confirm Password <span>*</span></p>
+                <input type="password" placeholder="Re-enter your password" id="confirmPassword">
+                <span class="error" id="confirmPasswordError"></span>
+            </div>
+
+            <!-- Bio -->
+            <div class="field">
+                <p>Bio <span>*</span></p>
+                <textarea type="textarea" placeholder="Tell us about yourself..." id="bio"></textarea>
+                <label id="bioCount">0 / 200 characters</label>
+                <span class="error" id="bioError"></span>
+            </div>
+
+            <!-- Terms & Conditions -->
+            <div class="terms_conditions">
+                <input type="checkbox" id="terms" />
+                <label>I agree to the <a href="#">Terms &amp; Conditions</a> <span style="color:red">*</span> </label>
+
+            </div>
+
+        </div>
+
+        <button type="submit" id="submitBtn" disabled>Submit</button>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #f0efff;   
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;     
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: scroll;
+    font-family: "Outfit", sans-serif;
+    
+}
+
+.reg_1{
+    background-color: #ffff;
+    border: #dcdbee solid 1px;
+    border-radius: 10px;  
+    padding: 20px;  
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  
+}
+
+.head{
+    color: rgb(53, 53, 206);
+    font-size: 25px;
+    padding: 10px;
+
+}
+.text{
+    padding-left: 11px;
+    font-size: 14px;
+    color: rgb(85, 78, 78);
+}
+#successMsg {
+    background-color: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #22c55e;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container{
+    padding: 10px;
+    margin-top: 0px;
+}
+
+.field p{
+    margin-top: 30px;
+    font-size: 13px;
+    font-weight:550;
+    font-family: Arial, sans-serif;
+}
+
+#gender{
+    margin-top: 10px;
+    padding: 12px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #fafafa;
+    width: 100%;
+    color: #333333;
+    outline: none;
+    font-family: Arial, sans-serif; 
+}
+
+#gender:focus{
+    border-color: #6c63ff;
+    background-color: #ffff;
+    box-shadow: 0 0 0 3px #ede9ff;
+}
+
+.field input{
+    margin-top: 10px;
+    padding: 12px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #fafafa;
+    width: 100%;
+    color: #333333;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+.field input:focus{
+    border-color: #6c63ff;
+    background-color: #ffff;
+    box-shadow: 0 0 0 3px #ede9ff;
+}
+
+.field textarea{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    background-color: #fafafa;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    height: 100px;
+}
+.field textarea:focus{
+    border-color: #6c63ff;
+    background-color: #ffff;
+    box-shadow: 0 0 0 3px #ede9ff;
+}
+
+/* js command valid,invalid */
+.field input.valid, .field textarea.valid, #gender.valid {
+    border-color: #22c55e;
+    background-color: #f0fdf4;
+}
+
+.field input.invalid, .field textarea.invalid, #gender.invalid {
+    border-color: #ef4444;
+    background-color: #fff5f5;
+}
+
+.field p span{
+    color: red;
+    padding-left: 3px;
+}
+
+.container label{
+    font-size: 11px;
+    color: #666666;
+    display: flex;
+    justify-content: end;
+    margin-top: 5px;
+}
+
+button:disabled {
+    background-color: #c4c4f3;
+    cursor: not-allowed;
+}
+
+button {
+    width: 440px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #251f92;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 10px;
+    
+}
+
+.terms_conditions {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.terms_conditions input{
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin: 0;
+    margin-top: 4px;
+}
+.terms_conditions label{
+    display: inline;
+    margin-left: 8px;
+    font-size: 13px;  
+    font-family: Arial, sans-serif; 
+    color: black;
+}
+
+.terms_conditions a{
+    text-decoration: none;
+    color: #191472;
+}
+.terms_conditions a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+.error {
+    color: red;
+    font-size: 11px;
+    margin-top: 4px;
+    display: block;
+}
+
+
