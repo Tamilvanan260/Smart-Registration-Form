@@ -28,32 +28,36 @@ let submitBtn = document.getElementById("submitBtn")
 //EventTarget 
 
 nameInput.addEventListener("input",function(){
-    if(nameInput.value.length >=2){
+    if(nameInput.value.trim().length >=2){
         nameInput.classList.add("valid")
+        nameInput.classList.remove("invalid");
         nameError.textContent = "";
         
     }else if(nameInput.value.length===0){
         nameInput.classList.remove("valid")
         nameInput.classList.add("invalid")
         nameError.textContent ="Name is Required."
-    }else{
-        nameInput.classList.remove("invalid")
-        nameInput.classList.add("valid")
+    }
+    else{
+        nameInput.classList.remove("valid")
+        nameInput.classList.add("invalid")
         nameError.textContent ="Name must be at least 2 characters."
     }
 });
 
+
 emailInput.addEventListener("input",function(){
     if(emailInput.value.includes("@") && emailInput.value.includes(".")){
         emailInput.classList.add("valid")
+        emailInput.classList.remove("invalid")
         emailError.textContent = "";
     }
     else if(emailInput.value.length ===0){
         emailInput.classList.add("invalid")
         emailError.textContent ="Email is Required."
     }else{
-        emailInput.classList.add("valid")
-        emailInput.classList.remove("invalid")
+        emailInput.classList.add("invalid")
+        emailInput.classList.remove("valid")
         emailError.textContent="please enter a valid email"
     }
 })
@@ -61,13 +65,14 @@ emailInput.addEventListener("input",function(){
 phoneInput.addEventListener("input",function(){
     if(phoneInput.value.length ===10){
         phoneInput.classList.add("valid")
+        phoneInput.classList.remove("invalid")
         phoneError.textContent =""
     }else if(phoneInput.value.length ===0){
         phoneInput.classList.add("invalid")
         phoneError.textContent ="Phone number is required."
     }else{
-        phoneInput.classList.add("valid")
-        phoneInput.classList.remove("invalid") 
+        phoneInput.classList.add("invalid")
+        phoneInput.classList.remove("valid") 
         phoneError.textContent ="Enter a valid 10-digit phone number."     
     }
 })
@@ -75,6 +80,7 @@ phoneInput.addEventListener("input",function(){
 dobInput.addEventListener("input",function(){
     if(dobInput.value !== ""){
         dobInput.classList.add("valid")
+        dobInput.classList.remove("invalid")
         dobError.textContent =""
     }else{
         dobInput.classList.add("invalid")
@@ -85,6 +91,7 @@ dobInput.addEventListener("input",function(){
 genderInput.addEventListener("input",function(){
     if(genderInput.value !== ""){
         genderInput.classList.add("valid")
+        genderInput.classList.remove("invalid")
         genderError.textContent =""
     }else{
         genderInput.classList.add("invalid")
@@ -97,13 +104,14 @@ passwordInput.addEventListener("input",function(){
     let remaining = 6 - passwordInput.value.length;
     if(passwordInput.value.length >=6){
         passwordInput.classList.add("valid")
+        passwordInput.classList.remove("invalid")
         passwordError.textContent =""
     }else if(passwordInput.value.length ===0){
         passwordInput.classList.add("invalid")
         passwordError.textContent ="Password is required."
     }else{
-        passwordInput.classList.add("valid")
-        passwordInput.classList.remove("invalid") 
+        passwordInput.classList.add("invalid")
+        passwordInput.classList.remove("valid") 
         passwordError.textContent ="Need " + remaining + " more character(s) to meet Strong Password."
     }
 })
@@ -111,13 +119,14 @@ passwordInput.addEventListener("input",function(){
 confirmPasswordInput.addEventListener("input",function(){
     if(confirmPasswordInput.value === passwordInput.value  && confirmPasswordInput.value !== "" ){
         confirmPasswordInput.classList.add("valid")
+        confirmPasswordInput.classList.remove("invalid")
         confirmPasswordError.textContent =""
     }else if(confirmPasswordInput.value.length ===0){
         confirmPasswordInput.classList.add("invalid")
         confirmPasswordError.textContent ="Please confirm your password."
     }else{
-        confirmPasswordInput.classList.add("valid")
-        confirmPasswordInput.classList.remove("invalid") 
+        confirmPasswordInput.classList.add("invalid")
+        confirmPasswordInput.classList.remove("valid") 
         confirmPasswordError.textContent ="Passwords do not match."
     }
 })
@@ -125,16 +134,17 @@ confirmPasswordInput.addEventListener("input",function(){
 bioInput.addEventListener("input",function(){
     document.getElementById("bioCount").textContent = bioInput.value.length +"/200 characters"
 
-    if(bioInput.value.length >=2 ){
+    if(bioInput.value.length >=10){
         bioInput.classList.add("valid")
+        bioInput.classList.remove("invalid")
         bioError.textContent =""
     }else if(bioInput.value.length ===0){
         bioInput.classList.add("invalid")
         bioError.textContent ="Bio is required."
     }else{
-        bioInput.classList.add("valid")
-        bioInput.classList.remove("invalid") 
-        bioError.textContent ="Bio must be at least 2 characters.."
+        bioInput.classList.add("invalid")
+        bioInput.classList.remove("valid") 
+        bioError.textContent ="Bio must be at least 10 characters.."
     }
 })
 
